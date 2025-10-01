@@ -1,0 +1,39 @@
+{
+  "dependencies": {
+    "@prisma/client": "^6.16.3",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1",
+    "mysql2": "^3.15.1",
+    "prisma": "^6.16.3"
+  },
+  "name": "todo-list-application-",
+  "version": "1.0.0",
+  "description": "1. ผู้ใช้สามารถเพิ่มรายการ todo ได้ 2. ผู้ใช้สามารถลบรายการ todo ได้ 3. ผู้ใช้สามารถทำเครื่องหมายรายการว่าเสร็จสิ้นแล้วได้",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JOMPOL-C/Todo-List-Application-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JOMPOL-C/Todo-List-Application-/issues"
+  },
+  "homepage": "https://github.com/JOMPOL-C/Todo-List-Application-#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.6.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  }
+}

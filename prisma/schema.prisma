@@ -1,0 +1,21 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model todos {
+  id          Int           @id @default(autoincrement())
+  title       String
+  description String?
+  status      todos_status  @default(PENDING)
+  created_at  DateTime      @default(now())
+}
+
+enum todos_status {
+  PENDING
+  DONE
+}
