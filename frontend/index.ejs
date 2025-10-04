@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<div class="container">
+  <h1>📋 My Todo List</h1>
+
+  <!-- ฟอร์มเพิ่ม Todo -->
+  <form action="/api/todos" method="POST" class="todo-form">
+    <input type="text" name="title" placeholder="📝 ชื่องาน" required>
+    <input type="text" name="description" placeholder="📌 รายละเอียด">
+    <button type="submit" class="btn-add">➕ เพิ่ม</button>
+  </form>
+
+  <!-- รายการ Todo -->
+  <div class="todo-list">
+    <% if (todos.length===0) { %>
+      <p class="empty">ยังไม่มีงานในระบบ 🎉</p>
+      <% } else { %>
+        <% todos.forEach(todo=> { %>
+          <div class="todo-card <%= todo.status === 'DONE' ? 'done' : '' %>">
+            <div class="todo-content">
+              <h3>
+                <%= todo.title %>
+              </h3>
+              <p>
+                <%= todo.description || "—" %>
+              </p>
+            </div>
+            <div class="todo-actions">
+              <form action="/api/todos/<%= todo.id %>?_method=PATCH" method="POST" style="display:inline;">
+                <input type="hidden" name="status" value="DONE">
+                <button type="submit" class="btn-done">✔️ เสร็จแล้ว</button>
+              </form>
+              <span class="status <%= todo.status.toLowerCase() %>">
+                <%= todo.status %>
+              </span>
+            </div>
+          </div>
+          <% }) %>
+            <% } %>
+  </div>
+
+</div>
+<script src="/script.js"></script>
+</body>
+
+</html>

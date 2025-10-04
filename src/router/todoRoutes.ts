@@ -11,7 +11,7 @@ const router = express.Router();
 router.post("/", createTodo);    // POST /api/todos
 router.get("/", getTodos);       // GET  /api/todos
 router.patch("/:id", updateTodo);  // patch  /api/todos/:id
-router.delete("/:id", deleteTodo);
+router.delete("/:id", deleteTodo); // DELETE /api/todos/:id
 
 
 export default router;

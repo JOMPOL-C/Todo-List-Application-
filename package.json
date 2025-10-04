@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "@prisma/client": "^6.16.3",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "method-override": "^3.0.0",
     "morgan": "^1.10.1",
     "mysql2": "^3.15.1",
     "prisma": "^6.16.3"
@@ -28,6 +30,7 @@
   },
   "homepage": "https://github.com/JOMPOL-C/Todo-List-Application-#readme",
   "devDependencies": {
+    "@types/ejs": "^3.1.5",
     "@types/express": "^5.0.3",
     "@types/morgan": "^1.9.10",
     "@types/node": "^24.6.1",
